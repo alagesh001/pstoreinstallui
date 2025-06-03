@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import './index.css';
-import appIcon from './assets/app-icon.png'; // Import app icon
+import appIcon from './assets/ftox_icon.png'; // Import app icon
 import bkIcon from './assets/bookmark.svg';
-import feature4 from './assets/abcd.png';
+import feature1 from './assets/att.png';
+
+import feature2 from './assets/prod.png';
+
+import feature3 from './assets/dsched.png';
+
+import feature4 from './assets/prof.png';
+
 
 function App() {
   const [installing, setInstalling] = useState(false);
@@ -16,10 +23,10 @@ window.addEventListener('beforeinstallprompt', (e) => {
   deferredPrompt = e;
 });
 const features = [
-  { title: "VIDEO CALLS", image: feature4 },
-  { title: "RANDOM PEOPLE", image: feature4 },
-  { title: "INTERACTIONS", image: feature4 },
-  { title: "FULL PRIVACY", image: feature4 },
+  { title: "ATTENDANCE", image: feature1 },
+  { title: "PRODUCTS", image: feature2 },
+  { title: "DIET SCHEDULE", image: feature3 },
+  { title: "PROFILE", image: feature4 },
 ];
 
 const handleInstall = async () => {
@@ -52,8 +59,8 @@ const handleInstall = async () => {
           className="w-20 h-20 rounded-lg"
         />
         <div className="flex-1">
-          <h1 className="text-2xl font-medium">TimiLiveWeb - Live Streams Video Calls & Chats</h1>
-          <p className="text-green-600 mt-4 font-semibold">Video Call App</p>
+          <h1 className="text-2xl font-medium">Fit Ox Connect - Gym Management For Clients</h1>
+          <p className="text-green-600 mt-4 font-semibold">Productivity App</p>
         </div>
       </div>
 
@@ -97,16 +104,23 @@ className={`mt-6 w-full bg-green-700 hover:bg-green-800 text-white py-2 px-2 rou
         </svg>
         This app is available for your device
       </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        {features.map((feature, index) => (
-          <div key={index} className="bg-gradient-to-b from-purple-500 to-blue-400 rounded-xl p-2 shadow-md">
-            <img src={feature.image} alt={feature.title} className="rounded-lg w-full" />
-            <div className="mt-2 text-white text-sm font-semibold text-center">
-              {feature.title}
-            </div>
-          </div>
-        ))}
+
+<div className="overflow-x-auto">
+  <div className="grid grid-cols-[repeat(4,minmax(200px,1fr))] gap-4 min-w-[800px]">
+    {features.map((feature, index) => (
+      <div 
+        key={index} 
+        className="bg-gradient-to-b from-yellow-500 to-gray-800 rounded-xl p-3 shadow-md"
+      >
+        <img src={feature.image} alt={feature.title} className="rounded-lg w-full" />
+        <div className="mt-2 text-white text-sm font-semibold text-center">
+          {feature.title}
+        </div>
       </div>
+    ))}
+  </div>
+</div>
+
     </div>
         <div className="max-w-21 w-full   px-1 py-6 space-y-6 text-gray-800">
  <section className="flex items-start justify-between">
@@ -123,12 +137,12 @@ className={`mt-6 w-full bg-green-700 hover:bg-green-800 text-white py-2 px-2 rou
   </svg>
 </section>
 <p className="text-s mt-1">
-  Top App in Entertainment! Watch and download new hot videos every day 🔥🔥🔥
+  Top App in Productivity! Manage your Gym Attendance, Products, Diet and profile.  🔥🔥🔥
 </p>
 
       <section>
         <h3 className="font-medium">Updated on</h3>
-        <p className="text-s text-gray-500">Feb 7, 2023</p>
+        <p className="text-s text-gray-500">Feb 7, 2025</p>
       </section>
 
       <section>
@@ -162,18 +176,18 @@ className={`mt-6 w-full bg-green-700 hover:bg-green-800 text-white py-2 px-2 rou
         <div className="mt-6 space-y-4">
           <Review
             name="Sanjay Kumar"
-            date="January 30, 2022"
-            comment="This app is so good! We are waiting for new HOT content!"
+            date="January 30, 2025"
+                        comment="This app has transformed the way I manage my fitness routine. The attendance marking feature is seamless—I love how I can just scan the QR code and be done. The products section is a game-changer; I discovered new supplements and gear I never knew my gym offered."
           />
           <Review
             name="Eduard Tereshko"
-            date="April 22, 2022"
-            comment="High quality content! After watching the first video, it is impossible to stop at the second"
+            date="April 22, 2025"
+            comment="The app does the basics well—I can mark my attendance without any issues, and the product list is handy for browsing gym merchandise."
           />
           <Review
             name="Asha Devi"
-            date="March 19, 2022"
-            comment="I'm really loving this app. 💦💦💦"
+            date="March 19, 2025"
+            comment="The app is very user-friendly and has made my gym visits more organized. Marking attendance is quick and hassle-free. I like the product catalog, but it would be even better if there were more payment options directly within the app. The diet schedule is helpful, though adding reminders for meal times would make it even more effective. Overall, a solid app with a lot of potential!"
           />
         </div>
       
