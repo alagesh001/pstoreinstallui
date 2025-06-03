@@ -109,10 +109,22 @@ className={`mt-6 w-full bg-green-700 hover:bg-green-800 text-white py-2 px-2 rou
       </div>
     </div>
         <div className="max-w-21 w-full   px-1 py-6 space-y-6 text-gray-800">
-      <section>
-        <h2 className="text-xl font-semibold">About this app</h2>
-        <p className="text-s mt-1">Top App in Entertainment! Watch and download new hot videos every day 🔥🔥🔥</p>
-      </section>
+ <section className="flex items-start justify-between">
+  <h2 className="text-xl font-semibold">About this app</h2>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-5 h-5 text-gray-500"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+  </svg>
+</section>
+<p className="text-s mt-1">
+  Top App in Entertainment! Watch and download new hot videos every day 🔥🔥🔥
+</p>
 
       <section>
         <h3 className="font-medium">Updated on</h3>
@@ -126,8 +138,19 @@ className={`mt-6 w-full bg-green-700 hover:bg-green-800 text-white py-2 px-2 rou
         </p>
       </section>
 
-      <section>
-        <h2 className="text-xl font-semibold">Ratings and reviews</h2>
+<section className="flex items-center justify-between mb-2">
+  <h2 className="text-xl font-semibold">Ratings and reviews</h2>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-5 h-5 text-gray-500"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+  </svg>
+</section>
         <p className="text-sm text-gray-500">Ratings and reviews are verified</p>
 
         <div className="mt-4 flex items-center space-x-4">
@@ -153,7 +176,7 @@ className={`mt-6 w-full bg-green-700 hover:bg-green-800 text-white py-2 px-2 rou
             comment="I'm really loving this app. 💦💦💦"
           />
         </div>
-      </section>
+      
     </div>
     </div>
   );
