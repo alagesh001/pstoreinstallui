@@ -105,14 +105,18 @@ className={`mt-6 w-full bg-green-700 hover:bg-green-800 text-white py-2 px-2 rou
         This app is available for your device
       </h2>
 
-<div className="overflow-x-auto">
-  <div className="grid grid-cols-[repeat(4,minmax(200px,1fr))] gap-4 min-w-[800px]">
+<div className="overflow-x-auto sm:overflow-x-visible">
+  <div className="grid grid-cols-4 sm:grid-cols-4 gap-8 min-w-[800px] sm:min-w-0">
     {features.map((feature, index) => (
-      <div 
-        key={index} 
-        className="bg-gradient-to-b from-yellow-500 to-gray-800 rounded-xl p-3 shadow-md"
+      <div
+        key={index}
+        className="bg-gradient-to-b from-yellow-500 to-gray-800 rounded-xl p-3 shadow-md min-w-[200px] sm:min-w-0"
       >
-        <img src={feature.image} alt={feature.title} className="rounded-lg w-full" />
+        <img
+          src={feature.image}
+          alt={feature.title}
+          className="rounded-lg w-full"
+        />
         <div className="mt-2 text-white text-sm font-semibold text-center">
           {feature.title}
         </div>
@@ -120,6 +124,7 @@ className={`mt-6 w-full bg-green-700 hover:bg-green-800 text-white py-2 px-2 rou
     ))}
   </div>
 </div>
+
 
     </div>
         <div className="max-w-21 w-full   px-1 py-6 space-y-6 text-gray-800">
